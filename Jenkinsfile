@@ -27,7 +27,7 @@ node {
         /* Finally, we'll push the image with two tags:comit13 Jan
          * First, the incremental build number from Jenkins
          * Second, the 'latest' tag.
-         * Pushing multiple tags is cheap, as all the layers are reused. */ commit 1
+         * Pushing multiple tags is cheap, as all the layers are reused. */
         docker.withRegistry('https://registry.hub.docker.com', 'rk10') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
